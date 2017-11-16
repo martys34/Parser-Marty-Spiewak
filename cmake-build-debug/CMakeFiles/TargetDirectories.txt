@@ -1,0 +1,3 @@
+C:/Users/Marty/CLionProjects/Parser-Marty-Spiewak/cmake-build-debug/CMakeFiles/Parser_Marty_Spiewak.dir
+C:/Users/Marty/CLionProjects/Parser-Marty-Spiewak/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Marty/CLionProjects/Parser-Marty-Spiewak/cmake-build-debug/CMakeFiles/rebuild_cache.dir
