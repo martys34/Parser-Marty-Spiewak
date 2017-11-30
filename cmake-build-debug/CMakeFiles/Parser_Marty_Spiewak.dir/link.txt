@@ -1,3 +1,1 @@
-"C:\Program Files\JetBrains\CLion 2017.2.3\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\Parser_Marty_Spiewak.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\Parser_Marty_Spiewak.dir/objects.a @CMakeFiles\Parser_Marty_Spiewak.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe -g   -Wl,--whole-archive CMakeFiles\Parser_Marty_Spiewak.dir/objects.a -Wl,--no-whole-archive  -o Parser_Marty_Spiewak.exe -Wl,--out-implib,libParser_Marty_Spiewak.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Parser_Marty_Spiewak.dir\linklibs.rsp
+/Library/Developer/CommandLineTools/usr/bin/cc -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/Parser_Marty_Spiewak.dir/parser.c.o  -o Parser_Marty_Spiewak 

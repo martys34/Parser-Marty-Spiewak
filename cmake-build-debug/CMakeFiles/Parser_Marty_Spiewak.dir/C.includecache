@@ -6,27 +6,27 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Marty/CLionProjects/Parser-Marty-Spiewak/firsts.h
+/Users/martyspiewak/CLionProjects/Parser-Marty-Spiewak/firsts.h
 
-C:/Users/Marty/CLionProjects/Parser-Marty-Spiewak/parser.c
+/Users/martyspiewak/CLionProjects/Parser-Marty-Spiewak/parser.c
 tokenizer.c
-C:/Users/Marty/CLionProjects/Parser-Marty-Spiewak/tokenizer.c
+/Users/martyspiewak/CLionProjects/Parser-Marty-Spiewak/tokenizer.c
 firsts.h
-C:/Users/Marty/CLionProjects/Parser-Marty-Spiewak/firsts.h
+/Users/martyspiewak/CLionProjects/Parser-Marty-Spiewak/firsts.h
 
-C:/Users/Marty/CLionProjects/Parser-Marty-Spiewak/structures.h
-malloc.h
+/Users/martyspiewak/CLionProjects/Parser-Marty-Spiewak/structures.h
+stdlib.h
 -
 string.h
 -
 
-C:/Users/Marty/CLionProjects/Parser-Marty-Spiewak/tokenizer.c
+/Users/martyspiewak/CLionProjects/Parser-Marty-Spiewak/tokenizer.c
 stdio.h
 -
-malloc.h
+stdlib.h
 -
 ctype.h
 -
 structures.h
-C:/Users/Marty/CLionProjects/Parser-Marty-Spiewak/structures.h
+/Users/martyspiewak/CLionProjects/Parser-Marty-Spiewak/structures.h
 

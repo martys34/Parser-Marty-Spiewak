@@ -1,9 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Parser_Marty_Spiewak.dir/parser.c.obj"
+  "CMakeFiles/Parser_Marty_Spiewak.dir/parser.c.o"
   "Parser_Marty_Spiewak.pdb"
-  "Parser_Marty_Spiewak.exe"
-  "Parser_Marty_Spiewak.exe.manifest"
-  "libParser_Marty_Spiewak.dll.a"
+  "Parser_Marty_Spiewak"
 )
 
 # Per-language clean rules from dependency scanning.

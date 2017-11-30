@@ -2,7 +2,8 @@
 // Created by Marty on 11/8/2017.
 //
 
-#include <malloc.h>
+//#include <malloc.h>
+#include <stdlib.h>
 #include <string.h>
 
 #ifndef LEXICAL_ANALYZER_C_STRUCTURES_C_H

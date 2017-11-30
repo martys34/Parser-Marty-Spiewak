@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include <malloc.h>
+//#include <malloc.h>
+#include <stdlib.h>
 #include <ctype.h>
 #include "structures.h"
 
@@ -126,13 +127,18 @@ void loadFile(char* path) {
 
     file = fopen(path, "r");
     //if opening in linux environment
-    if(file == NULL) {
+    if (file == NULL) {
         path = "TestFile.c";
         file = fopen(path, "r");
     }
-    if(file != NULL) {
+    if (file != NULL) {
         stack = createStack();
         printf("%s", "File has been loaded.\n");
+    }
+
+}
+
+void tokenizerTest() {
 
         Token *token = nextToken();
         while (token->type != END) {
@@ -140,11 +146,10 @@ void loadFile(char* path) {
             memset(tk, 0, sizeof(tk));
             memset(testKey, 0, sizeof(testKey));
             token = nextToken();
+
         }
         printf("%s", tokenToString(token));
-    }
 
-//    return 0;
 }
 
 Token* nextToken() {
@@ -850,11 +855,11 @@ _Bool checkSuffix(char c) {
 }
 
 TokenType checkKeyword(char* lex) {
-    int arraySize = sizeof(keywordStrings) / sizeof(TokenType);
+    int arraySize = sizeof(keywordStrings) / sizeof(keywordStrings[0]);
     TokenType t;
     int index;
     for(int i = 0; i < arraySize; i++) {
-        if(keywordStrings[i] == lex) {
+        if(strcmp(keywordStrings[i], lex) == 0) {
             index = i;
             t = keywords[index];
             return t;

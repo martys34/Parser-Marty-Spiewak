@@ -7,6 +7,8 @@
 
 #endif //LEXICAL_ANALYZER_C_FIRSTS_H
 
+_Bool inFirst(char* firsts[], Token token);
+
 char* fWhile[] = {"while"};
 char* fLofVar2[] = {"IDENT"};
 char* fAssign[] = {"IDENT"};
@@ -32,101 +34,94 @@ char* fDec[] = {"int", "char"};
 char* fLofStatements[] = {"cin", "cout", "if", "IDENT", "while", "{", "return", ""};
 char* fProgram[] = {"int", "char", "cin", "cout", "if", "IDENT", "while", "{", "return", ""};
 
-char** first(char* rule) {
+_Bool checkFirst(char* rule, Token token) {
+
+
     if(strcmp("program", rule) == 0) {
-        return fProgram;
+        return inFirst(fProgram, token);
     }
 
     else if(strcmp("listofstatements", rule) == 0) {
-        fLofStatements;
+        return inFirst(fLofStatements, token);
     }
 
     else if(strcmp("declaration", rule) == 0) {
-        return fDec;
+        return inFirst(fDec, token);
     }
 
     else if(strcmp("variable", rule) == 0) {
-        return fVariable;
+        return inFirst(fVariable, token);
     }
 
     else if(strcmp("type", rule) == 0) {
-        return fType;
+        return inFirst(fType, token);
     }
 
     else if(strcmp("statement", rule) == 0) {
-        return fStatement;
-    }
+        return inFirst(fStatement, token);    }
 
     else if(strcmp("cin", rule) == 0) {
-        return fCin;
-    }
+        return inFirst(fCin, token);    }
 
     else if(strcmp("listofvariables1", rule) == 0) {
-        return fLofVar1;
-    }
+        return inFirst(fLofVar1, token);    }
 
     else if(strcmp("cout", rule) == 0) {
-        return fCout;
-    }
+        return inFirst(fCout, token);    }
 
     else if(strcmp("listofexpressions", rule) == 0) {
-        return fLofExp;
-    }
+        return inFirst(fLofExp, token);    }
 
     else if(strcmp("if", rule) == 0) {
-        return fIf;
-    }
+        return inFirst(fIf, token);    }
 
     else if(strcmp("exp", rule) == 0) {
-        return fExp;
-    }
+        return inFirst(fExp, token);    }
 
     else if(strcmp("logand", rule) == 0) {
-        return fLogand;
-    }
+        return inFirst(fLogand, token);    }
 
     else if(strcmp("bor", rule) == 0) {
-        return fBor;
-    }
+        return inFirst(fBor, token);    }
 
     else if(strcmp("band", rule) == 0) {
-        return fBand;
-    }
+        return inFirst(fBand, token);    }
 
     else if(strcmp("bop", rule) == 0) {
-        return fBop;
-    }
+        return inFirst(fBop, token);    }
 
     else if(strcmp("comp", rule) == 0) {
-        return fComp;
-    }
+        return inFirst(fComp, token);    }
 
     else if(strcmp("add", rule) == 0) {
-        return fAdd;
-    }
+        return inFirst(fAdd, token);    }
 
     else if(strcmp("mult", rule) == 0) {
-        return fMult;
-    }
+        return inFirst(fMult, token);    }
 
     else if(strcmp("uop", rule) == 0) {
-        return fUop;
-    }
+        return inFirst(fUop, token);    }
 
     else if(strcmp("prim", rule) == 0) {
-        return fPrim;
-    }
+        return inFirst(fPrim, token);    }
 
     else if(strcmp("assign", rule) == 0) {
-        return fAssign;
-    }
+        return inFirst(fAssign, token);    }
 
     else if(strcmp("listofvariables2", rule) == 0) {
-        return fLofVar2;
-    }
+        return inFirst(fLofVar2, token);    }
 
     else if(strcmp("while", rule) == 0) {
-        return fWhile;
-    }
+        return inFirst(fWhile, token);    }
 
+}
+
+_Bool inFirst(char* firsts[], Token token) {
+    int arrSize = sizeof(firsts) / sizeof(firsts[0]);
+    for(int i = 0; i < arrSize; i++) {
+        if(strcmp(firsts[i], token.lexeme) == 0) {
+            return 1;
+        }
+    }
+    return 0;
 }

@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/Marty/CLionProjects/Parser-Marty-Spiewak/parser.c" "C:/Users/Marty/CLionProjects/Parser-Marty-Spiewak/cmake-build-debug/CMakeFiles/Parser_Marty_Spiewak.dir/parser.c.obj"
+  "/Users/martyspiewak/CLionProjects/Parser-Marty-Spiewak/parser.c" "/Users/martyspiewak/CLionProjects/Parser-Marty-Spiewak/cmake-build-debug/CMakeFiles/Parser_Marty_Spiewak.dir/parser.c.o"
   )
-set(CMAKE_C_COMPILER_ID "GNU")
+set(CMAKE_C_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
