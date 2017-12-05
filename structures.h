@@ -97,7 +97,9 @@ enum TokenType {
     LONGCOMMENT,
     LINECOMMENT,
     BAD_TOKEN,
-    NOPE
+    NOPE,
+    CIN,
+    COUT
 };
 
 typedef enum TokenType TokenType;
@@ -187,7 +189,10 @@ char* enumString[] = {
         "END",
         "LONGCOMMENT",
         "LINECOMMENT",
-        "BAD_TOKEN"
+        "BAD_TOKEN",
+        "NOPE",
+        "CIN",
+        "COUT"
 };
 
 struct Token{
@@ -239,4 +244,9 @@ char pop(Stack* s) {
     }
     char c = s->lexeme[s->top--];
     return c;
+}
+
+char* checkType(TokenType tkType) {
+    char* type = enumString[tkType];
+    return type;
 }

@@ -153,6 +153,8 @@ void tokenizerTest() {
 }
 
 Token* nextToken() {
+    memset(tk, 0, sizeof(tk));
+    memset(testKey, 0, sizeof(testKey));
     char c;
     //index of token
     int i, state;
@@ -506,8 +508,17 @@ Token* nextToken() {
             testKey[x] = tk[x];
         }
         TokenType type = checkKeyword(testKey);
+
         if(type == NOPE) {
-            type = IDENT;
+            if(strcmp(tk, "cin") == 0) {
+                type = CIN;
+            }
+            else if(strcmp(tk, "cout") == 0) {
+                type = COUT;
+            }
+            else {
+                type = IDENT;
+            }
         }
         ungetChar(c);
         return createToken(type, tk, i);
@@ -609,13 +620,13 @@ Token* nextToken() {
         }
     }
 
-    //punctation
+    //punctuation
 
-    char first = c;
+    char first = tk[0];
     char second;
     char third;
 
-    tk[0] = first;
+//    tk[0] = first;
 
     switch(first) {
 

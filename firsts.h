@@ -9,119 +9,154 @@
 
 _Bool inFirst(char* firsts[], Token token);
 
-char* fWhile[] = {"while"};
-char* fLofVar2[] = {"IDENT"};
-char* fAssign[] = {"IDENT"};
-char* fPrim[] = {"INT", "CONSTCH", "IDENT", "("};
-char* fUop[] = {"!", "-", "~", "INT", "CONSTCH", "IDENT", "("};
-char* fMult[] = {"!", "-", "~", "INT", "CONSTCH", "IDENT", "("};
-char* fAdd[] = {"!", "-", "~", "INT", "CONSTCH", "IDENT", "("};
-char* fComp[] = {"!", "-", "~", "INT", "CONSTCH", "IDENT", "("};
-char* fBop[] = {"!", "-", "~", "INT", "CONSTCH", "IDENT", "("};
-char* fBand[] = {"!", "-", "~", "INT", "CONSTCH", "IDENT", "("};
-char* fBor[] = {"!", "-", "~", "INT", "CONSTCH", "IDENT", "("};
-char* fLogand[] = {"!", "-", "~", "INT", "CONSTCH", "IDENT", "("};
-char* fExp[] = {"!", "-", "~", "INT", "CONSTCH", "IDENT", "("};
-char* fIf[] = {"if"};
-char* fLofExp[] = {"!", "-", "~", "INT", "CONSTCH", "IDENT", "("};
-char* fCout[] = {"cout"};
-char* fLofVar1[] = {"IDENT"};
-char* fCin[] = {"cin"};
-char* fStatement[] = {"cin", "cout", "if", "IDENT", "while", "{", "return"};
-char* fType[] = {"int", "char"};
-char* fVariable[] = {"IDENT"};
-char* fDec[] = {"int", "char"};
-char* fLofStatements[] = {"cin", "cout", "if", "IDENT", "while", "{", "return", ""};
-char* fProgram[] = {"int", "char", "cin", "cout", "if", "IDENT", "while", "{", "return", ""};
+char* fWhile[] = {"1", "while"};
+char* fLofVar2[] = {"1", "IDENT"};
+char* fAssign[] = {"1", "IDENT"};
+char* fPrim[] = {"4", "INT", "CONSTCH", "IDENT", "("};
+char* fUop[] = {"7", "!", "-", "~", "INT", "CONSTCH", "IDENT", "("};
+char* fMult[] = {"7", "!", "-", "~", "INT", "CONSTCH", "IDENT", "("};
+char* fAdd[] = {"7", "!", "-", "~", "INT", "CONSTCH", "IDENT", "("};
+char* fComp[] = {"7", "!", "-", "~", "INT", "CONSTCH", "IDENT", "("};
+char* fBop[] = {"7", "!", "-", "~", "INT", "CONSTCH", "IDENT", "("};
+char* fBand[] = {"7", "!", "-", "~", "INT", "CONSTCH", "IDENT", "("};
+char* fBor[] = {"7", "!", "-", "~", "INT", "CONSTCH", "IDENT", "("};
+char* fLogand[] = {"7", "!", "-", "~", "INT", "CONSTCH", "IDENT", "("};
+char* fExp[] = {"7", "!", "-", "~", "INT", "CONSTCH", "IDENT", "("};
+char* fIf[] = {"1", "if"};
+char* fLofExp[] = {"7", "!", "-", "~", "INT", "CONSTCH", "IDENT", "("};
+char* fCout[] = {"1", "cout"};
+char* fLofVar1[] = {"1", "IDENT"};
+char* fCin[] = {"1", "cin"};
+char* fStatement[] = {"7", "cin", "cout", "if", "IDENT", "while", "{", "return"};
+char* fType[] = {"2", "int", "char"};
+char* fVariable[] = {"1", "IDENT"};
+char* fDec[] = {"2", "int", "char"};
+char* fLofStatements[] = {"8", "cin", "cout", "if", "IDENT", "while", "{", "return", ""};
+char* fProgram[] = {"10", "int", "char", "cin", "cout", "if", "IDENT", "while", "{", "return", ""};
 
-_Bool checkFirst(char* rule, Token token) {
-
-
-    if(strcmp("program", rule) == 0) {
-        return inFirst(fProgram, token);
-    }
-
-    else if(strcmp("listofstatements", rule) == 0) {
-        return inFirst(fLofStatements, token);
-    }
-
-    else if(strcmp("declaration", rule) == 0) {
-        return inFirst(fDec, token);
-    }
-
-    else if(strcmp("variable", rule) == 0) {
-        return inFirst(fVariable, token);
-    }
-
-    else if(strcmp("type", rule) == 0) {
-        return inFirst(fType, token);
-    }
-
-    else if(strcmp("statement", rule) == 0) {
-        return inFirst(fStatement, token);    }
-
-    else if(strcmp("cin", rule) == 0) {
-        return inFirst(fCin, token);    }
-
-    else if(strcmp("listofvariables1", rule) == 0) {
-        return inFirst(fLofVar1, token);    }
-
-    else if(strcmp("cout", rule) == 0) {
-        return inFirst(fCout, token);    }
-
-    else if(strcmp("listofexpressions", rule) == 0) {
-        return inFirst(fLofExp, token);    }
-
-    else if(strcmp("if", rule) == 0) {
-        return inFirst(fIf, token);    }
-
-    else if(strcmp("exp", rule) == 0) {
-        return inFirst(fExp, token);    }
-
-    else if(strcmp("logand", rule) == 0) {
-        return inFirst(fLogand, token);    }
-
-    else if(strcmp("bor", rule) == 0) {
-        return inFirst(fBor, token);    }
-
-    else if(strcmp("band", rule) == 0) {
-        return inFirst(fBand, token);    }
-
-    else if(strcmp("bop", rule) == 0) {
-        return inFirst(fBop, token);    }
-
-    else if(strcmp("comp", rule) == 0) {
-        return inFirst(fComp, token);    }
-
-    else if(strcmp("add", rule) == 0) {
-        return inFirst(fAdd, token);    }
-
-    else if(strcmp("mult", rule) == 0) {
-        return inFirst(fMult, token);    }
-
-    else if(strcmp("uop", rule) == 0) {
-        return inFirst(fUop, token);    }
-
-    else if(strcmp("prim", rule) == 0) {
-        return inFirst(fPrim, token);    }
-
-    else if(strcmp("assign", rule) == 0) {
-        return inFirst(fAssign, token);    }
-
-    else if(strcmp("listofvariables2", rule) == 0) {
-        return inFirst(fLofVar2, token);    }
-
-    else if(strcmp("while", rule) == 0) {
-        return inFirst(fWhile, token);    }
-
-}
 
 _Bool inFirst(char* firsts[], Token token) {
-    int arrSize = sizeof(firsts) / sizeof(firsts[0]);
-    for(int i = 0; i < arrSize; i++) {
-        if(strcmp(firsts[i], token.lexeme) == 0) {
+    int arrSize = atoi(firsts[0]) + 1;
+    for(int i = 1; i < arrSize; i++) {
+        if((strcmp(firsts[i], checkType(token.type)) == 0) || (strcmp(firsts[i], token.lexeme) == 0)) {
             return 1;
         }
     }
     return 0;
+}
+
+struct Node {
+    //1 is inner, 2 is leaf
+    int type;
+    union {
+        Token* token;
+        char* rule;
+    } data;
+    struct Node* first_child; //Points to the first node on the next level down
+    struct Node* next_sib; //Points to the next node on the same level
+};
+
+typedef struct Node Node;
+
+Node* createTkNode(Token* tk) {
+    Node* node = malloc(sizeof(Node));
+    char* lexCopy;
+    lexCopy = malloc(sizeof(char) * strlen(tk->lexeme));
+    strcpy(lexCopy, tk->lexeme);
+    Token* newTk = createToken(tk->type, lexCopy, 0);
+    node->type = 2;
+    node->data.token = newTk;
+    node->first_child = NULL;
+    node->next_sib = NULL;
+    return node;
+}
+
+Node* createSNode(char* rule) {
+    Node* node = malloc(sizeof(Node));
+    node->type = 1;
+    node->data.rule = rule;
+    node->first_child = NULL;
+    node->next_sib = NULL;
+    return node;
+}
+
+void setChild(Node* node, Node* child) {
+    if(node->first_child == NULL) {
+        node->first_child = child;
+    }
+    else {
+        Node* nextChild = node->first_child;
+        while(nextChild->next_sib != NULL) {
+            nextChild = nextChild->next_sib;
+        }
+        nextChild->next_sib = child;
+    }
+}
+
+char* nodeToString(Node* node) {
+    char* string = (char*) malloc(sizeof(char) * 50);
+    if(node->type == 1) {
+        strcpy(string, "Rule: ");
+        strcat(string, node->data.rule);
+        strcat(string, "\n");
+    }
+    else {
+        strcpy(string, tokenToString(node->data.token));
+    }
+    return string;
+}
+
+void printTree(Node* root) {
+    printf("%s", nodeToString(root));
+    if(root->first_child != NULL) {
+        printTree(root->first_child);
+    }
+    if(root->next_sib != NULL) {
+        printTree(root->next_sib);
+    }
+}
+
+int offset = 0;
+int counter = 0;
+
+typedef struct Symbol Symbol;
+
+struct Symbol {
+    TokenType type;
+    char* name;
+    int offSet;
+};
+
+
+Symbol* symTable[10000];
+
+void addSymbol(TokenType tType, char* tName) {
+    Symbol* s = malloc(sizeof(Symbol));
+    char* nameCopy;
+    nameCopy = malloc(sizeof(char) * strlen(tName));
+    strcpy(nameCopy, tName);
+    s->name = nameCopy;
+    s->offSet = offset;
+    if(tType == INT) {
+        s->type = INT;
+        offset += 4;
+    }
+    else {
+        s->type = CHAR;
+        offset += 1;
+    }
+
+    symTable[counter++] = s;
+
+}
+
+_Bool tryAdd(TokenType tType, char* tName) {
+    for(int i = 0; i < counter; i++) {
+        Symbol* s = symTable[i];
+        if(s->type == tType && strcmp(s->name, tName) == 0) {
+            return 0;
+        }
+    }
+    addSymbol(tType, tName);
+    return 1;
 }

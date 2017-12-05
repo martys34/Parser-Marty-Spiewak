@@ -1,28 +1,18 @@
-int main()
-{
-    char name[50];
-    int marks, i, num;
+int x,y,z;
 
-    printf("Enter number of students: ");
+int d;
 
-    FILE *fptr;
-    fptr = (fopen("C:\\student.txt", "w"));
-    if(fptr == NULL)
-    {
-        char* check = "Hi";
-        printf("Error!");
-        exit(1);
-    }
+cin>>x>>y;
 
-    for(i = 0; i < num; ++i)
-    {
-        int x = 4056l;
-        printf("For student\nEnter name: ", i+1);
+z=x+2*y-7;
 
-        printf("Enter marks: ");
+d=z/(x+2*x);
 
-    }
-
-    fclose(fptr);
-    return 0;
+cout<<x<<y+3*z<<d-(x-2);
+while(y>0){
+z=x % y;
+x=y;
+y=z;
 }
+cout<<x;
+
