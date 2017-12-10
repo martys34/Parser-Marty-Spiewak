@@ -136,15 +136,7 @@ void addSymbol(TokenType tType, char* tName) {
     nameCopy = malloc(sizeof(char) * strlen(tName));
     strcpy(nameCopy, tName);
     s->name = nameCopy;
-    s->offSet = offset;
-    if(tType == INT) {
-        s->type = INT;
-        offset += 4;
-    }
-    else {
-        s->type = CHAR;
-        offset += 1;
-    }
+    s->offSet = offset++;
 
     symTable[counter++] = s;
 
